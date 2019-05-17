@@ -1,0 +1,1478 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 8, 2019, 12:48:00 PM
+    Author     : admin
+*/
+
+$font-stack:    'Poppins', sans-serif;
+$primary-color:#4D3400;
+$weight:400;
+$size: 16px;
+
+body{
+    font-family:$font-stack;
+    color: $primary-color;
+    font-weight: $weight;
+    font-size: $size;
+}
+.navbar ul{
+    li{
+        padding: 0px 3px;
+        a{
+            font-size: 14px;
+        }
+    }
+    li.active{
+        a{
+            font-weight: 600;
+            position:relative;
+            &:after {
+                content: "";
+                height: 9px;
+                width: 56px;
+                position: absolute;
+                bottom: -27px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                background: #FFB300;
+            }
+        }
+    }
+}
+.navbar .collapse.navbar-collapse{
+    position: relative;
+}
+
+@mixin button($size, $weight, $color, $bg-color, $border-color, $padding, $radius){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    background-color: $bg-color;
+    border-color:$border-color;
+    padding: $padding;
+    border-radius:$radius; 
+}
+.pm-buy-button a{
+    @include button(16,700,#ffffff,#F96C00,#F96C00,8px 50px,25px);
+    box-shadow: 0 5px 6px -6px #000000;
+    text-decoration: none;
+}
+.pm-buy-button a#pm-nav-button{
+    position: absolute;
+    right: 0px;
+    top: -90px;
+    transition: 0.5s all;
+}
+.pm-know-more-button a{
+    @include button(16,700,#ffffff,#F96C00,#F96C00,8px 50px,25px);
+    box-shadow: 0 5px 6px -6px #000000;
+    text-decoration: none;
+}
+
+/*navbar*/
+.navbar{
+    background: #ffffff;
+    box-shadow: 0 0px 8px -3px #000000;
+}
+#pm-mobile-nav{
+    display: none;
+}
+.navbar #navbarTogglerDemo01 ul{
+    margin-right: 140px;
+}
+
+/*End navbar*/
+
+/*banner section*/
+$width: 100%;
+
+.pm-banner .pm-bg-banner-img{
+    position: relative
+}
+.pm-banner .pm-bg-banner-img img{
+    width: $width;
+    object-fit: cover;
+    height: 78vh;
+}
+.pm-banner .pm-banner-title{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.pm-buy-three-steps-mobile-steps{
+    display: none;
+}
+$headline-size:56px;
+$color:#ffffff;
+$heading-weight:600;
+$subheadline-size:14px;
+$top-margin:0px;
+$bottom-margin:0px;
+$bg-colors:#FFB300;
+$subfont-size:40px;
+$subpara-font-size:24px;
+$sec-bg-color:#F1F1F1;
+$italic-style: italic;
+$text-color:#fff;
+
+
+#banner-section{
+    box-shadow: 0 0px 17px -9px #000000;
+    /*box-shadow: 0 0px 8px -3px #000000;*/
+    /*margin-top: 87px;*/
+}
+.pm-subbanner-content p{
+    margin-top: 8px;
+    font-weight:$heading-weight;
+}
+.pm-banner-section .pm-bg-banner-img{
+    display: block;
+    margin-top: 85px;
+}
+.pm-banner-section .pm-bg-banner-mobile-img{
+    display: none;
+}
+.pm-banner .pm-banner-headline-details h1{
+    font-weight: $heading-weight;
+    color: $color;
+    font-size:$headline-size;
+
+}
+.pm-banner .pm-banner-headline-details .pm-subbanner-content{
+    font-size: $subheadline-size;
+    color:$primary-color;
+}
+#banner-section .pm-buy-three-steps{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#banner-section .pm-buy-three-steps .pm-payment-mode{
+    display: flex;
+    align-items: center;
+}
+#banner-section .pm-buy-three-steps .pm-payment-mode p{
+    margin-top: $top-margin;
+    margin-bottom: $bottom-margin;
+    color: $primary-color;
+    font-weight:$heading-weight; 
+    font-size:$size;
+}
+#banner-section .pm-buy-three-steps .pm-payment-mode p.pm-payment-number{
+    font-weight: 600;
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    background-color: #FFB300;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    color: #4D3400;
+}
+#banner-section .pm-buy-three-steps h2{
+    font-weight:$heading-weight; 
+    font-size:$subpara-font-size;
+    color: $primary-color;
+    margin-bottom: 0;
+
+}
+.pm-buy-three-steps .pm-next-arrow-icon{
+    background: url('../img/Group236.png') no-repeat;
+    width: 55px;
+    height: 20px;
+    display: block;
+}
+.pm-buy-three-steps .pm-next-arrow-icons{
+    background: url('../img/right-arrow.png') no-repeat;
+    width: 25px;
+    height: 22px;
+    display: block;
+}
+.pm-banner-features{
+    display: flex;
+}
+.pm-banner-features .pm-subbanner-content{
+    margin-right: 40px; 
+    text-align: center;
+}
+.pm-buy-three-steps .pm-bye-three-steps-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 380px;
+}
+.pm-buy-three-steps .pm-bye-three-steps-subcontent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pm-banner-section{
+    /*height: 86vh;*/
+}
+/*End banner section*/
+
+/*second section*/
+.pm-why-devgad-video-popup .slick-dots{
+    margin: 27px 0 !important;
+}
+/*End second section*/
+
+/*Third section*/
+.pm-why-devgad-mangoes h2{
+    font-weight:$heading-weight; 
+    font-size:$subfont-size;
+    color: $primary-color;
+}
+#pm-counters .pm-counter-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+#pm-counters{
+    background:$bg-colors;
+    padding: 50px 0 25px 0;
+}
+#pm-counters .pm-counter-details .pm-counter-count h3{
+    font-size:$subfont-size;
+    color: $primary-color;
+    font-weight: $heading-weight;
+    margin-bottom: $bottom-margin;
+}
+.pm-buy-button-count a{
+    @include button(16,700,#4D3400,#FFFFFF,#FFFFFF,10px 50px,25px);
+    box-shadow: 0 5px 6px -6px #000000;
+    text-decoration: none;
+}
+
+/*End Third section*/
+
+/*fourth section*/
+.pm-identify-original-alphonso h2{
+    font-family: $font-stack;
+    font-weight:$heading-weight; 
+    font-size:$subfont-size;
+    color: $primary-color;
+}
+.pm-alphonso-type .pm-alphonso-type-headline{
+    display: flex;
+    align-items: flex-end;
+}
+.pm-alphonso-type .pm-alphonso-type-headline p{
+    font-size: $subpara-font-size;
+    font-weight: $heading-weight;
+    color: $primary-color;
+    margin-left: 20px;
+}
+.pm-alphonso-type .card .card-body{
+    padding: 30px 60px;
+}
+.pm-alphonso-type .pm-alphonso-type-detalis .pm-payment-number{
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    background-color: #FFB300;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    color: #4D3400;
+    margin-right: 25px;
+}
+.pm-alphonso-type .pm-alphonso-type-detalis{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.pm-identify-original-alphonso{
+    background: $sec-bg-color;
+}
+.pm-identify-original-alphonso .pm-alphonso-type .card{
+    border: none;
+}
+.pm-border-bottom{
+    border-bottom: 2px solid #F1F1F1;
+}
+.pm-identify-original-alphonso .pm-identify-original-alphonso-details{
+    position: relative;
+}
+
+.pm-original-vs-chemical{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 100px;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+.pm-original-vs-chemical p{
+    display: inline-block;
+    background: #F1F1F1;
+    border: 2px solid #CCCCCC;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 50%;
+    color: #CCCCCC;
+    font-size: $subfont-size;
+    font-weight: $heading-weight;
+}
+.pm-devgad-mangoes p{
+    margin-top: 12px;
+    font-weight: $heading-weight;
+}
+
+/*End fourth section*/
+
+/*fifth section*/
+.pm-alphonso-organization{
+    display: flex;
+    background: linear-gradient(to right, #ffb300 0%,#ffb300 50%,#ffffff 50%,#fff 100%);
+}
+.pm-alphonso-organization .pm-mango-bonds{
+    /*width: 50%;*/ 
+    background: $bg-colors;
+    padding: 50px 50px;
+}
+.pm-alphonso-organization .pm-about-devgad-organization{
+    /*width: 50%;*/ 
+    padding: 50px 50px;
+}
+.pm-mango-bonds-details .pm-mango-band-title{
+    font-weight: $heading-weight;
+    font-size: $subpara-font-size;
+    color: $primary-color;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+.pm-mango-bonds-details span{
+    font-weight: $heading-weight;
+    font-size: $size;
+}
+.pm-mango-bonds-details .pm-mango-band-description{
+    font-weight: $weight;
+    font-size: $size;
+    color: $primary-color;
+    margin-top: 19px;
+    height: 147px;
+}
+
+
+.pm-about-devgad-organization .pm-about-devgad-organization-details{
+    font-weight: $heading-weight;
+    font-size: $subpara-font-size;
+    color: $primary-color;
+}
+.pm-about-devgad-organization .pm-about-devgad-organization-description{
+    font-weight: $weight;
+    font-size: $size;
+    color: $primary-color;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+/*End Fifth section*/
+
+/*Sixth section*/
+.pm-testimonial{
+    background:$sec-bg-color;
+}
+.pm-testimonial h2{
+    font-weight:$heading-weight; 
+    font-size:$subfont-size;
+    color: $primary-color;
+}
+.pm-testimonial .pm-author-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.pm-testimonial .pm-meta {
+    margin-left: 18px;
+}
+.pm-testimonial .pm-story-content {
+    background: #fff;
+    padding: 26px;
+    position: relative;
+}
+.pm-testimonial .pm-story-content:before {
+    content: '';
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #ffffff;
+    border-left: 15px solid transparent;
+    top: calc( 0% - 29px );
+    left: 26px;
+}
+.pm-testimonial .pm-author-meta .pm-meta .pm-author-name{
+    font-weight: $heading-weight;
+    font-size: $size;
+    color: $primary-color;
+    margin-bottom: 5px;
+}
+.pm-testimonial .pm-author-meta .pm-meta .pm-education{
+    font-weight: $weight;
+    font-size: $size;
+    font-style: $italic-style;
+    margin-bottom: $bottom-margin;
+}
+.pm-testimonial .pm-testimonial-wrapper .pm-story-content{
+    font-weight: $weight;
+    font-size: $size;
+    margin-bottom: $bottom-margin;
+    min-height: 190px;
+    border-radius: 15px;
+}
+.slick-next:focus{
+    outline: none;
+}
+.slick-prev{
+    outline: none;
+}
+.slick-prev {
+    background: url('../img/left-arrow.png') no-repeat;
+    width: 17px;
+    height: 26px;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    position: absolute;
+    left: -50px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 999;
+}
+.slick-next {
+    background: url('../img/right-arrow.png') no-repeat;
+    width: 22px;
+    height: 26px;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    position: absolute;
+    right: -50px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+}
+.slick-dots {
+    padding: 0;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+    margin: 32px 0 !important;
+    text-align: center;
+}
+.slick-dots li {
+    margin-right: 15px;
+    display: inline-block;
+}
+.slick-dots .slick-active button {
+    background: #FF5F00;
+}
+.slick-dots li button {
+    padding: 6px;
+    border-radius: 50%;
+    border: none;
+    background: #FFFFFF;
+    cursor: pointer;
+    font-size: 0;
+}
+.slick-dots .slick-active button:focus {
+    outline: none;
+}
+/*End sixth section*/
+
+/*Footer*/
+footer{
+    background: #4D3400;
+}
+.pm-footer{
+    padding: 50px 0 30px 0;
+}
+.pm-footer .pm-footer-all-menus{
+    display: flex;
+    justify-content: space-between;
+}
+.pm-footer-all-menus .pm-footer-menu ul li{
+    padding: 0 8px;
+}
+.pm-footer-all-menus .pm-footer-menu ul{
+    color: #fff;
+    list-style: none;
+    display: inline-flex;
+    padding-left: 0;
+    margin-bottom: $bottom-margin;
+}
+.pm-footer .pm-social-media ul{
+    list-style: none;
+    display: inline-flex;
+    padding-left: 0;
+    margin-bottom: $bottom-margin;
+}
+.pm-footer .pm-social-media ul li .pm-facebook{
+    background: url(../img/facebook-logo-button.png) no-repeat;
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+.pm-footer .pm-social-media ul li .pm-insta{
+    background: url('../img/instagram.png') no-repeat;
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+.pm-footer .pm-social-media ul li .pm-twitter{
+    background: url('../img/twitter-logo-silhouette.png') no-repeat;
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin-top: 3px;
+}
+.pm-copyright p{
+    margin-bottom: $bottom-margin;
+}
+.pm-footer-all-menus{
+    color: #fff;
+}
+.why-devgad-mangoes-vedio .slick-dots li button {
+    background: #CCCCCC;
+}
+.why-devgad-mangoes-vedio .slick-dots .slick-active button {
+    background: #FF5F00;
+}
+footer .pm-social-media ul li{
+    padding: 0 10px;
+}
+/*End footer*/
+
+/*Media query*/
+/*Home page*/
+@media (max-width:480px) and (max-width:600px){
+    #pm-counters .pm-counter-details {
+        display: block;
+        column-count: 2;
+        text-align: center;
+    }
+    #pm-counters .pm-counter-details .pm-counter-count{
+        margin-bottom: 35px;
+    }
+    #pm-counters .pm-buy-count-mobile{
+        display: none;
+    }
+
+    .pm-identify-original-alphonso h2 {
+        font-size: 32px;
+    }
+    .pm-alphonso-type .card .card-body {
+        padding: 30px 25px;
+    }
+    .pm-footer .pm-footer-all-menus {
+        display: block;
+    }
+    .pm-original-vs-chemical {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pm-alphonso-type .pm-alphonso-type-headline {
+        display: flex;
+        align-items: center;
+    }
+    .pm-alphonso-type{
+        margin-top: 20px;
+    }
+    .pm-alphonso-type .pm-alphonso-type-headline p {
+        font-size: 18px;
+    }
+    .pm-alphonso-second-type{
+        margin-top: 0px;
+    }
+    .pm-original-vs-chemical p {
+        margin-bottom: 0;
+    }
+
+    /*navbar*/
+    .navbar-default .d-flex.align-items-center.w-50{
+        width: 50% !important;
+    }
+    .pm-mob-nav-overlay a {
+        font-size: 20px
+    }
+    .pm-buy-button a {
+        font-size: 16px;
+        font-weight: 700;
+        color: #ffffff;
+        background-color: #F96C00;
+        border-color: #F96C00;
+        padding: 10px 128px;
+        border-radius: unset !important; 
+        display: inline-block;
+        width: 100%;
+    }
+    .pm-mob-nav-overlay .closebtn {
+        position: absolute;
+        right: 0;
+        top: 0px;
+        background: #fff;
+        border-radius: 0;
+        height: 51px;
+        width: 50px;
+        background-image: url(../img/cross-img.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .pm-mob-nav-overlay .closebtn:before{
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 34px;
+        top: 0;
+        background: #FFCB00;
+    }
+    .navbar button.navbar-toggler span{
+        position: absolute;
+        right: 0;
+        top: 17px;
+        background: #fff;
+        border-radius: 0;
+        height: 46px;
+        width: 46px;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+        color: #333;
+    }
+    .navbar button.navbar-toggler:before {
+        content: '';
+        background: #f96c00;
+        height: 4px;
+        position: absolute;
+        width: 35px;
+        top: 0px;
+        right: 5px;
+    }
+    .navbar ul li.active a:after {
+        display: none;
+    }
+    #pm-mobile-nav{
+        display: block;
+    }
+    /*End navbar*/
+    /*Footer*/
+    .pm-footer-all-menus .pm-footer-menu ul li {
+        padding: 8px 20px;
+        position: relative;
+        margin-left: 3px;
+    }
+    .pm-footer-all-menus .pm-footer-menu ul {
+        column-count: 2;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .pm-footer-all-menus .pm-footer-menu ul li:before{
+        content: '';
+        width: 11px;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        top: 19px;
+        left: 1px;
+    }
+    .pm-footer-menu{
+        border-bottom: 2px solid #fff;
+    }
+    .pm-social-copyright{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .pm-footer {
+        padding: 30px 0 60px 0;
+    }
+    .pm-alphonso-organization {
+        background: none;
+    }
+    footer .pm-copyright{
+        text-align: center;
+    }
+    footer .pm-social-media{
+        text-align: center;
+        margin-top: 20px;
+    }
+    /*End footer*/
+
+    /*navbar*/
+    .navbar-light .navbar-toggler {
+        border: none; 
+    }
+    .pm-mob-nav-overlay {
+        height: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+        background-color: rgb(0,0,0);
+        background-color: #FFB300;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .pm-mob-nav-overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .pm-mob-nav-overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .pm-mob-nav-overlay a:hover, .pm-mob-nav-overlay a:focus {
+        color: #f1f1f1;
+    }
+    .pm-mob-nav-overlay .closebtn {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        font-size: 60px;
+    }
+    .pm-mob-nav-heade{
+        position: relative;
+    }
+    #pm-mobile-nav .overlay-content{
+        margin-top: 100px;
+    }
+    #pm-mobile-nav .overlay-content ul{
+        text-align: center;
+    }
+    #pm-mobile-nav .overlay-content ul li.active a{
+        font-size: 32px;
+        color: #231F20;
+        border-bottom: 5px solid #231F20;
+        display: inline-block;
+    }
+    #pm-mobile-nav .overlay-content ul li a{
+        font-size: 32px;
+        color: #fff;
+    }
+    .navbar .navbar-brand img{
+        width: 70%;
+    }
+    /*End navbar*/
+
+    /*banner*/
+    .pm-banner .pm-banner-title {
+        bottom: 110px;
+        align-items: flex-end;
+    }
+    #pm-alphonso .pm-alphonso-organization .col-sm-6.col-xs-6{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .pm-banner-section .pm-bg-banner-img{
+        display: none
+    }
+    .pm-banner-section .pm-bg-banner-mobile-img{
+        display: block;
+        margin-top: 68px;
+    }
+    .pm-bg-banner-mobile-img img{
+        width: $width;
+    }
+    /*    .pm-banner .pm-banner-title {
+            top: 350px !important;
+        }*/
+    .pm-banner .pm-banner-headline-details h1 {
+        font-size: 38px;
+    }
+    .pm-banner-features {
+        margin-top: 25px;
+        justify-content: space-between
+    }
+    .pm-banner-features .pm-subbanner-content {
+        margin-right: 0px; 
+    }
+    #banner-section {
+        box-shadow: none; 
+        /*margin-top: 75px;*/
+    }
+    .pm-banner-section {
+        /*height: 110vh;*/
+    }
+    #banner-section .pm-buy-three-steps-mobile .pm-payment-mode{
+        display: flex;
+        align-items: start;
+        padding: 5px 0;
+    }
+    #banner-section .pm-buy-three-steps-mobile span.pm-next-arrow-icon{
+        background: url('../img/Group236.png') no-repeat;
+        width: 55px;
+        height: 25px;
+        display: block;
+    }
+    #banner-section .pm-buy-three-steps-mobile .pm-payment-mode p{
+        margin-top: $top-margin;
+        margin-bottom: $bottom-margin;
+        color: $primary-color;
+        font-weight:$heading-weight; 
+        font-size:$size;
+        margin-left: 15px;
+    }
+    #banner-section .pm-buy-three-steps-mobile .pm-payment-mode p.pm-payment-number{
+        height: 30px;
+        width: 30px;
+        min-width: 30px;
+        background-color: #FFB300;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        font-size: 18px;
+        color: #4D3400;
+        line-height: 30px;
+    }
+
+    #banner-section .pm-buy-three-steps-mobile h2{
+        font-size: 24px;
+        font-weight: $heading-weight;
+    }
+    .pm-buy-three-steps-mobile .pm-buy-three-steps-mobile-steps{
+        display: flex;
+        justify-content: stretch;
+        /*align-items: center;*/
+    }
+    .pm-buy-three-steps-mobile .pm-buy-three-steps-mobile-steps .pm-payment-mode{
+        display: flex;
+    }
+    #banner-section .pm-banner-section{
+        background: #f1f1f1;
+    }
+    .pm-buy-button{
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+        width: 100%;
+        left: 0;
+        /*padding: 20px 0;*/
+        z-index: 9999;
+    }
+    /*End banner*/
+
+    .pm-buy-three-steps{
+        display: none !important;
+    }
+    .pm-why-devgad-mangoes h2 {
+        font-size: 32px;
+    }
+    .pm-devgad-mangoes-features{
+        width: 50%;
+    }
+    #pm-counters {
+        padding: 50px 0 25px 0 !important;
+    }
+    .pm-why-devgad-mangoes{
+        margin-top: 35px;
+    }
+    .pm-identify-original-alphonso {
+        padding: 42px 0;
+    }
+    .pm-testimonial {
+        padding-top: 35px;
+    }
+    .pm-testimonial h2 {
+        font-size: 32px;
+    }
+    #pm-mobile-nav .overlay-content ul li:after{
+        content: '';
+    }
+    .pm-mango-bonds .pm-buy-button-count{
+        margin-top: 35px;
+    }
+
+
+    /*Fourth section*/
+    .pm-alphonso-organization .pm-mango-bonds {
+        padding: 50px 25px;
+    }
+    .pm-alphonso-organization .pm-about-devgad-organization {
+        padding: 50px 25px;
+    }
+    .pm-about-devgad-organization .pm-about-devgad-organization-description {
+        margin-bottom: 40px;
+    }
+    .pm-mango-bonds-details .pm-mango-band-title {
+        font-size: 32px;
+    }
+    .pm-about-devgad-organization .pm-about-devgad-organization-details {
+        font-size: 32px;
+    }
+    .pm-mango-bonds-details .pm-mango-band-description {
+        height: 132px !important;
+    }
+    /*End Fourth Section*/
+    #banner-section .pm-buy-three-steps-mobile .pm-payment-mode {
+        padding: 0 0 20px 0;
+    }
+    .pm-order-one{
+        order: 2;
+    }
+    .pm-identify-original-alphonso h2 {
+        margin-bottom: 20px;
+    }
+    .pm-why-devgad-mangoes h2 {
+        margin-bottom: 20px;
+    }
+    .pm-buy-three-steps-details{
+        margin-top: 25px;
+    }
+    .pm-buy-three-steps-mobile-steps .pm-bye-three-steps-title {
+        width: 118px !important;
+    }
+}
+
+@media(min-width:320px) and (max-width:399px){
+    #pm-counters .pm-counter-details {
+        column-count: 1;
+    }
+    .pm-why-devgad-mangoes h2 {
+        font-size: 28px;
+    }
+    .pm-identify-original-alphonso h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .pm-order-one{
+        order: 2;
+    }
+    .pm-mango-bonds-details .pm-mango-band-title {
+        font-size: 28px;
+    }
+    .pm-about-devgad-organization .pm-about-devgad-organization-details {
+        font-size: 28px;
+    }
+    .pm-testimonial h2 {
+        font-size: 28px;
+    }
+    .pm-mango-bonds-details .pm-mango-band-description {
+        height: 170px !important;
+    }
+    .pm-banner .pm-banner-title {
+        bottom: 50px !important;
+        align-items: flex-end;
+    }
+    .pm-subbanner-content p {
+        margin-right: 5px;
+    }
+    #banner-section .pm-buy-three-steps-mobile h2 {
+        font-size: 24px;
+        font-weight: $heading-weight;
+        line-height: 32px;
+    }
+    .pm-buy-three-steps-mobile-steps .pm-bye-three-steps-title{
+        width: 115px !important;
+    }
+    #banner-section .pm-buy-three-steps-mobile .pm-payment-mode p {
+        margin-left: 10px; 
+        margin-right: 0px;
+    }
+    #banner-section .pm-buy-three-steps-mobile .pm-payment-mode {
+        padding: 0px 0 20px 0px;
+    }
+    .pm-original-vs-chemical p{
+        margin-bottom: 0px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+
+    #pm-counters .pm-counter-details {
+        column-count: 2;
+        display: block;
+        text-align: center;
+    }
+    #pm-counters .pm-buy-count-mobile{
+        display: none;  
+    }
+    .pm-alphonso-type .card .card-body {
+        padding: 30px 35px;
+    }
+    .slick-next {
+        display: none !important;
+    }
+    .slick-prev {
+        display: none !important;
+    }
+    /*navbar*/
+    .navbar-default .d-flex.align-items-center.w-50{
+        width: 50% !important;
+    }
+    .pm-mob-nav-overlay a {
+        font-size: 20px
+    }
+    .pm-mob-nav-overlay {
+        height: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+        background-color: black;
+        background-color: #FFB300;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+    .pm-mob-nav-overlay .closebtn {
+        position: absolute;
+        right: 0;
+        top: 0px;
+        background: #fff;
+        border-radius: 0;
+        height: 51px;
+        width: 50px;
+        background-image: url(../img/cross-img.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .pm-mob-nav-overlay .closebtn:before{
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 34px;
+        top: 0;
+        background: #FFCB00;
+    }
+    .navbar button.navbar-toggler span{
+        position: absolute;
+        right: 0;
+        top: 17px;
+        background: #fff;
+        border-radius: 0;
+        height: 46px;
+        width: 46px;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+        color: #333;
+    }
+    .navbar button.navbar-toggler:before {
+        content: '';
+        background: #f96c00;
+        height: 4px;
+        position: absolute;
+        width: 35px;
+        top: 0px;
+        right: 5px;
+    }
+    .navbar ul li.active a:after {
+        display: none;
+    }
+    #pm-mobile-nav{
+        display: block;
+    }
+    #pm-mobile-nav .overlay-content {
+        margin-top: 100px;
+    }
+    #pm-mobile-nav .overlay-content ul {
+        text-align: center;
+    }
+    #pm-mobile-nav .overlay-content ul li.active a {
+        font-size: 32px;
+        color: #231F20 !important;
+        border-bottom: 5px solid #231F20;
+        display: inline-block;
+    }
+    #pm-mobile-nav .overlay-content ul li a {
+        font-size: 32px;
+        color: #ffffff;
+        display: inline-block;
+    }
+    /*End navbar*/
+    /*footer*/
+    footer .pm-copyright{
+        display: inline-block;
+        margin-left: 270px;
+        margin-top: -26px;
+        vertical-align: middle;
+    }
+    footer .pm-social-media{
+        display: inline-block;
+        margin-top: 28px;
+    }
+    .pm-footer .pm-footer-all-menus {
+        display: block;
+    }
+    .pm-footer-all-menus .pm-footer-menu ul {
+        column-count: 3;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .pm-banner .pm-banner-headline-details h1 {
+        font-size: 36px;
+    }
+    .pm-footer {
+        padding: 50px 0 80px 0;
+    }
+    /*End footer*/
+
+    /*Banner section*/
+
+    .pm-buy-three-steps .pm-next-arrow-icons {
+        width: 45px;
+    }
+    .pm-buy-three-steps .pm-next-arrow-icon {
+        width: 105px;
+    }
+    .pm-buy-button {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+        width: 100%;
+        left: 0;
+        /* padding: 20px 0; */
+        z-index: 9999;
+    }
+    .pm-buy-button a {
+        font-size: 16px;
+        font-weight: 700;
+        color: #ffffff;
+        background-color: #F96C00;
+        border-color: #F96C00;
+        padding: 10px 128px;
+        border-radius: unset !important;
+        display: inline-block;
+        width: 100%;
+        box-shadow: none;
+    }
+    .pm-banner .pm-banner-title {
+        bottom: 384px;
+    }
+    .pm-banner .pm-bg-banner-img img {
+        height: 45vh;
+    }
+    /*End banner section*/
+    .pm-mango-bonds-details .pm-mango-band-description {
+        height: 235px;
+    }
+}
+
+@media only screen
+and (min-device-width : 400px)
+and (max-device-width : 900px)
+and (orientation : landscape){
+    /*navbar*/
+    /*    .navbar-default .d-flex.align-items-center.w-50{
+            width: 50% !important;
+        }*/
+    .navbar-light .navbar-toggler {
+        color: unset; 
+        border: none;
+        border-color: unset;
+    }
+    .pm-mob-nav-overlay a {
+        font-size: 20px
+    }
+    .pm-mob-nav-overlay {
+        height: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+        background-color: black;
+        background-color: #FFB300;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+    .pm-mob-nav-overlay .closebtn {
+        position: absolute;
+        right: 0;
+        top: 0px;
+        background: #fff;
+        border-radius: 0;
+        height: 51px;
+        width: 50px;
+        background-image: url(../img/cross-img.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .pm-mob-nav-overlay .closebtn:before{
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 34px;
+        top: 0;
+        background: #FFCB00;
+    }
+    .navbar button.navbar-toggler span{
+        position: absolute;
+        right: 0;
+        top: 17px;
+        background: #fff;
+        border-radius: 0;
+        height: 46px;
+        width: 46px;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+        color: #333;
+    }
+    .navbar button.navbar-toggler:before {
+        content: '';
+        background: #f96c00;
+        height: 4px;
+        position: absolute;
+        width: 35px;
+        top: 0px;
+        right: 5px;
+    }
+    .navbar .navbar-brand img {
+        width: 70%;
+    }
+    .navbar ul li.active a:after {
+        display: none;
+    }
+    #pm-mobile-nav{
+        display: block;
+    }
+    #pm-mobile-nav .overlay-content {
+        margin-top: 100px;
+    }
+    #pm-mobile-nav .overlay-content ul {
+        text-align: center;
+    }
+    #pm-mobile-nav .overlay-content ul li.active a {
+        font-size: 32px;
+        color: #231F20 !important;
+        border-bottom: 5px solid #231F20;
+        display: inline-block;
+    }
+    #pm-mobile-nav .overlay-content ul li a {
+        font-size: 32px;
+        color: #ffffff;
+        display: inline-block;
+    }
+    /*End navbar*/
+    /*Banner section*/
+    .pm-banner-section .pm-bg-banner-img {
+        margin-top: 65px;
+    }
+    .pm-buy-three-steps-mobile .pm-buy-three-steps-mobile-steps {
+        padding: 20px 0 0 0;
+    }
+    #banner-section .pm-buy-three-steps-mobile .pm-payment-mode {
+        padding: 0px 0 0px 0px !important;
+    }
+    #banner-section .pm-buy-three-steps-mobile .pm-payment-mode p {
+        color: $primary-color;
+        font-weight: $heading-weight;
+        font-size: 16px;
+    }
+    .pm-banner .pm-banner-headline-details h1 {
+        font-size: 40px;
+    }
+    .pm-banner .pm-banner-title {
+        top: 50px;
+    }
+    .pm-buy-three-steps {
+        display: none !important;
+    }
+    .pm-buy-three-steps-mobile .pm-buy-three-steps-mobile-steps {
+        display: flex;
+        justify-content: space-between;
+    }
+    #banner-section .pm-buy-three-steps-mobile .pm-payment-mode {
+        display: flex;
+        align-items: start;
+        padding: 0px 0 20px 0px;
+    }
+    #banner-section .pm-buy-three-steps-mobile .pm-payment-mode p.pm-payment-number {
+        height: 30px;
+        width: 30px;
+        min-width: 30px;
+        background-color: #FFB300;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        font-size: 18px;
+        color: #4D3400;
+        line-height: 30px;
+    }
+    #banner-section .pm-buy-three-steps-mobile .pm-payment-mode p {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .pm-buy-three-steps-mobile .pm-buy-button{
+        display: none;
+    }
+    #banner-section .pm-buy-three-steps-mobile span.pm-next-arrow-icon {
+        background: url(../img/Group236.png) no-repeat;
+        width: 55px;
+        height: 25px;
+        display: block;
+    }
+    .pm-buy-button {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+        width: 100%;
+        left: 0;
+        /* padding: 20px 0; */
+        z-index: 9999;
+    }
+    .pm-buy-button a {
+        font-size: 16px;
+        font-weight: 700;
+        color: #ffffff;
+        background-color: #F96C00;
+        border-color: #F96C00;
+        padding: 10px 128px;
+        border-radius: unset !important;
+        display: inline-block;
+        width: 100%;
+        box-shadow: none;
+    }
+    .pm-buy-three-steps-mobile-steps .pm-bye-three-steps-title h2{
+        font-size: 24px;
+        font-weight: $heading-weight;
+        line-height: 32px;
+    }
+    /*counter section*/
+    #pm-counters .pm-counter-details {
+        display: block; 
+        text-align: center;
+        column-count: 2;   
+    }
+    #pm-counters .pm-buy-count-mobile{
+        display: none;
+    }
+    /*End Counter section*/
+
+    /*original alphonso*/
+    .pm-identify-original-alphonso {
+        padding: 40px 0;
+    }
+    .pm-identify-original-alphonso h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .pm-original-vs-chemical {
+        content: '';
+        position: absolute;
+        right: 0;
+        left: 0 ;
+        margin: auto;
+        text-align: center;
+        top: 0 !important;
+        bottom: 0;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .pm-alphonso-type {
+        margin-top: 20px;
+    }
+    .pm-order-one {
+        order: 2;
+    }
+    .pm-alphonso-organization .pm-mango-bonds {
+        padding: 50px 0px;
+    }
+    .pm-alphonso-organization .pm-about-devgad-organization {
+        padding: 50px 10px;
+    }
+    .pm-mango-bonds-details .pm-mango-band-description {
+        height: 213px;
+    }
+    /*End original alphonso*/
+    /*footer*/
+    .pm-footer {
+        padding: 30px 0 60px 0;
+    }
+    .pm-footer-menu {
+        border-bottom: 2px solid #fff;
+    }
+    .pm-footer-all-menus .pm-footer-menu ul {
+        column-count: 3;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .pm-footer-all-menus .pm-footer-menu ul li {
+        padding: 8px 20px;
+        position: relative;
+        margin-left: 3px;
+    }
+    .pm-footer-all-menus .pm-footer-menu ul li:before {
+        content: '';
+        width: 11px;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        top: 19px;
+        left: 1px;
+    }
+    footer .pm-social-media {
+        text-align: center;
+        margin-top: 20px;
+    }
+    footer .pm-copyright {
+        text-align: center;
+    }
+    .pm-footer .pm-footer-all-menus {
+        display: block;
+    }           
+    /*End Footer*/
+    /*testomonial section*/
+    .pm-testimonial {
+        padding: 35px 0 10px 0;
+    }
+    .pm-testimonial h2 {
+        font-size: 32px;
+    }
+    .pm-why-devgad-mangoes h2 {
+        font-size: 32px;
+    }   
+    /*End testomonial section*/
+
+    /*second section*/
+    .pm-why-devgad-mangoes{
+        padding: 35px 0 10px 0;
+    }
+    /*End Second Section*/
+}
+
+
+
+
+
